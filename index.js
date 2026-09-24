@@ -242,7 +242,7 @@
 
     <!-- Nur Login-Link generieren und User-Daten laden (kein Callback-Code hier!) -->
     <script>
-        const CLIENT_ID = 'DEINE_CLIENT_ID_HIER_EINTRAGEN'; // Deine Client ID
+        const CLIENT_ID = '1439998052692791446'; // Deine Client ID
         // Der Redirect leitet jetzt sauber zur callback.html weiter
         const REDIRECT_URI = window.location.origin + '/callback.html';
 
