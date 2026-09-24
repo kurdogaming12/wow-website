@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Discord Login wird verarbeitet...</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-slate-950 text-white flex items-center justify-center h-screen">
+    <div class="text-center">
+        <div class="w-12 h-12 border-4 border-indigo-500 border-t-transparent rounded-full animate-spin mx-auto mb-4"></div>
+        <h2 class="text-xl font-bold">Discord Login wird abgeschlossen...</h2>
+        <p class="text-slate-400 text-sm mt-2">Du wirst gleich zur Startseite weitergeleitet.</p>
+    </div>
+
+    <script>
+        // Token aus der URL extrahieren (#access_token=...)
+        const fragment = new URLSearchParams(window.location.hash.slice(1));
+        const accessToken = fragment.get('access_token');
+
+        if (accessToken) {
+            // Token im Browser speichern
+            localStorage.setItem('discord_token', accessToken);
+            // Zurück zur Hauptseite leiten
+            window.location.href = 'index.html';
+        } else {
+            // Bei Fehler oder Abbruch direkt zurück zur Startseite
+            window.location.href = 'index.html';
+        }
+    </script>
+</body>
+</html>
